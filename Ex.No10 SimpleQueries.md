@@ -1,4 +1,4 @@
-# Ex,No: 
+# Ex.No: 
 # Logic Programming –  Simple queries from facts and rules
 ### DATE:                                                                            
 ### REGISTER NUMBER : 212222040101
