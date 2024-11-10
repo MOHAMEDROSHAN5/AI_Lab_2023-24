@@ -1,44 +1,30 @@
 # Ex.No: 10 Learning – Use Supervised Learning  
 ### DATE: 24.10.2024                                                                  
 ### REGISTER NUMBER : 212222040101
-### AIM: 
 
-The aim of this project is to develop a machine learning-based heart disease prediction system.
-The system uses a dataset of patient health metrics to predict the likelihood of heart disease, assisting 
-healthcare professionals in making informed decisions based on the analysis of key risk factors.
+## AIM
 
-###  Algorithm:
+The aim of this project is to develop a machine learning-based heart disease prediction system. The system uses a dataset of patient health metrics to predict the likelihood of heart disease, assisting healthcare professionals in making informed decisions based on the analysis of key risk factors.
 
-Step 1: Start the program.
+## Algorithm
 
-Step 2: Import necessary packages, including NumPy, Pandas, and Sklearn for data handling, model building, and evaluation, as well as Streamlit for creating the user interface.
+1. Start the program.
+2. Import necessary packages, including NumPy, Pandas, and Sklearn for data handling, model building, and evaluation, as well as Streamlit for creating the user interface.
+3. Load the heart disease dataset using Pandas.
+4. Check for missing values in the dataset. Handle any missing values by filling with median values or dropping rows if necessary.
+5. Split the data into input features (X) and the target label (Y), where Y represents the presence or absence of heart disease.
+6. Divide the data into training and testing sets using the `train_test_split` function from Sklearn.
+7. Standardize the features in both training and testing sets using `StandardScaler` to ensure they have a mean of 0 and a standard deviation of 1.
+8. Choose a classifier, such as Random Forest or Logistic Regression, and train it on the training data.
+9. Test the model’s accuracy by making predictions on the test set and calculating accuracy using `accuracy_score`.
+10. Define a `predict_heart_disease` function that takes user input for the required features and outputs the model's prediction.
+11. Build an interactive interface using Streamlit where users can input their data and view the prediction result.
+12. Deploy the Streamlit app for online access, enabling users to interact with the heart disease prediction model.
+13. Stop the program.
 
-Step 3: Load the heart disease dataset using Pandas.
+## Program
 
-Step 4: Check for missing values in the dataset. Handle any missing values by filling with median values or dropping rows if necessary.
-
-Step 5: Split the data into input features (X) and the target label (Y), where Y represents the presence or absence of heart disease.
-
-Step 6: Divide the data into training and testing sets using the train_test_split function from Sklearn.
-
-Step 7: Standardize the features in both training and testing sets using StandardScaler to ensure they have a mean of 0 and a standard deviation of 1.
-
-Step 8: Choose a classifier, such as Random Forest or Logistic Regression, and train it on the training data.
-
-Step 9: Test the model’s accuracy by making predictions on the test set and calculating accuracy using accuracy_score.
-
-Step 10: Define a predict_heart_disease function that takes user input for the required features and outputs the model's prediction.
-
-Step 11: Build an interactive interface using Streamlit where users can input their data and view the prediction result.
-
-Step 12: Deploy the Streamlit app for online access, enabling users to interact with the heart disease prediction model.
-
-Step 13: Stop the program.
-
-### Program:
-
-```
-
+```python
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -126,7 +112,6 @@ plt.suptitle('Distribution of Continuous Variables', fontsize=20)
 plt.tight_layout()
 plt.subplots_adjust(top=0.92)
 plt.show()
-
 
 # Filter out categorical features for the univariate analysis
 categorical_features = df.columns.difference(continuous_features)
@@ -229,6 +214,8 @@ plt.show()
 # Check for missing values in the dataset
 df.isnull().sum().sum()
 
+continuous_features
+
 Q1 = df[continuous_features].quantile(0.25)
 Q3 = df[continuous_features].quantile(0.75)
 IQR = Q3 - Q1
@@ -246,12 +233,17 @@ for feature in features_to_convert:
 
 df_encoded.dtypes
 
+# Displaying the resulting DataFrame after one-hot encoding
+df_encoded.head()
+
 # Define the features (X) and the output labels (y)
 X = df_encoded.drop('target', axis=1)
 y = df_encoded['target']
 
 # Splitting data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0, stratify=y)
+
+continuous_features
 
 # Adding a small constant to 'oldpeak' to make all values positive
 X_train['oldpeak'] = X_train['oldpeak'] + 0.001
@@ -281,6 +273,8 @@ for i, col in enumerate(continuous_features):
 
 fig.tight_layout()
 plt.show()
+
+X_train.head()
 
 # Define the base DT model
 dt_base = DecisionTreeClassifier(random_state=0)
@@ -360,7 +354,6 @@ dt_evaluation = evaluate_model(best_dt, X_test, y_test, 'DT')
 dt_evaluation
 
 rf_base = RandomForestClassifier(random_state=0)
-
 
 param_grid_rf = {
     'n_estimators': [10, 30, 50, 70, 100],
@@ -475,8 +468,12 @@ plt.show()
 
 ### Output:
 
-![alt](Output-Screenshots\o1.png)
-![alt](Output-Screenshots\o2.png)
+<figure>
+  <img src="Output-Screenshots/o1.png" alt="Output Screenshot 1">
+  <img src="Output-Screenshots/o2.png" alt="Output Screenshot 1">
+  <figcaption>Figure 1: Model Performance</figcaption>
+</figure>
+
 
 
 
