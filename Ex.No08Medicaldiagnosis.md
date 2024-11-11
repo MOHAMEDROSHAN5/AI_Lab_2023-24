@@ -1,8 +1,4 @@
-<<<<<<< HEAD:Ex.No08Medicaldiagnosis.md
 # Ex.No: 08  Logic Programming –  Medical Diagnosis Expert System
-=======
-# Ex.No: 10  Logic Programming –  Medical Diagnosis Expert System
->>>>>>> 974f1dd5cec842c3ff0e228ee360e12e4159140a:Ex.No8Medicaldiagnosis.md
 ### DATE: 19.09.2024                                                     
 ### REGISTER NUMBER : 212222040101
 ### AIM: 

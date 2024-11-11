@@ -1,8 +1,4 @@
-<<<<<<< HEAD:Ex.No09_ComputerMaintenance.md
-# Ex.No: 11  Logic Programming –  Computer Maintenance Expert System
-=======
-# Ex.No: 11 Logic Programming –  Computer Maintenance Expert System
->>>>>>> 974f1dd5cec842c3ff0e228ee360e12e4159140a:Ex.No9_ComputerMaintenance.md
+# Ex.No: 09 Logic Programming –  Computer Maintenance Expert System
 ### DATE: 19.09.2024                                                               
 ### REGISTER NUMBER : 212222040101
 ### AIM: 
