@@ -1,5 +1,9 @@
 # Ex.No: 3  Implementation of Minimax Search
+<<<<<<< HEAD
 ### DATE: 22.08.2024	                               
+=======
+### DATE: 22.08.2024	                                                                      
+>>>>>>> 974f1dd5cec842c3ff0e228ee360e12e4159140a
 ### REGISTER NUMBER : 212222040101
 
 ### AIM: 
