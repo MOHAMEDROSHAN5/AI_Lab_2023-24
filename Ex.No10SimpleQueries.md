@@ -1,4 +1,4 @@
-# Logic Programming –  Simple queries from facts and rules
+# Ex.No: 10 Logic Programming –  Simple queries from facts and rules
 ### DATE: 26.09.2024                               
 ### REGISTER NUMBER : 212222040101
 ### AIM: 
