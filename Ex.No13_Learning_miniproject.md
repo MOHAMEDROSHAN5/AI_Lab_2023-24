@@ -1,4 +1,4 @@
-# Ex.No: 13 Learning – Use Supervised Learning  
+# Ex.No: 13 Heart Disease Prediction – Use Supervised Learning  
 ### DATE: 24.10.2024                                                                  
 ### REGISTER NUMBER : 212222040101
 
